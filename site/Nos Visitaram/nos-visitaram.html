@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Visitaram | Memória ITA Fortaleza</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../../img/logo/ITA_logo.png" alt="Logo ITA-Fortaleza" id="logo-itafz">
+        <nav>
+            <ul class="menu-lista">
+                <li><a href="../../home-page.html">Início</a></li>
+                <li><a href="index.html#timeline-section">Linha do Tempo</a></li>
+                <li><a href="#">Documentos</a></li>
+                <li><a href="https://lookerstudio.google.com/reporting/00abd5c3-fbc3-4f8b-b3a1-439d1693b2a0/page/p_nua2xipdwd"
+                        target="_blank" rel="noopener noreferrer">Painel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="visitas-hero">
+        <div class="visitas-overlay"></div>
+        <div class="visitas-content anim-up">
+            <h1>Nos Visitaram</h1>
+            <p>Registros de quem viu a história nascer de perto.</p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section class="intro-reveal-section">
+        <div class="container-narrow">
+            <h2 class="headline-reveal">
+                <span class="reveal-wrap"><span class="reveal-content">O <strong>ITA Fortaleza</strong> é um imã de
+                        inovação.</span></span><br>
+                <span class="reveal-wrap delay-1"><span class="reveal-content">Estudantes, autoridades e
+                        pesquisadores</span></span><br>
+                <span class="reveal-wrap delay-2"><span class="reveal-content">testemunhando o futuro da
+                        engenharia</span></span><br>
+                <span class="reveal-wrap delay-3"><span class="reveal-content">em solo cearense.</span></span>
+            </h2>
+
+            <div class="intro-divider anim-up delay-4"></div>
+
+            <p class="intro-paragraph anim-up delay-5">
+                Esta página reúne os registros dessas visitas técnicas. Ver a obra de perto é compreender a grandeza do
+                esforço coletivo que move este novo capítulo da educação brasileira.
+            </p>
+        </div>
+    </section>
+
+    <section class="interactive-showcase">
+    <div class="container-wide showcase-grid">
+
+        <!-- DISPLAY -->
+        <div class="showcase-display">
+            <div class="display-image-container">
+                <img id="showcaseImg"
+                     src="img/nos-visitaram/alunos/alunos.jpg"
+                     alt="Visitas">
+            </div>
+
+            <div class="display-info">
+                <h3 id="showcaseTitle">O Futuro na Prática</h3>
+                <p id="showcaseDesc">
+                    Escolas e universidades visitam o canteiro de obras.
+                </p>
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <div class="showcase-nav">
+            <h2 class="section-title-left">Quem esteve aqui</h2>
+
+            <ul class="nav-list">
+
+                <li class="nav-item active"
+                    data-img="../../img/nos-visitaram/alunos/5129611065640553344.jpg"
+                    data-title="O Futuro na Prática"
+                    data-desc="Estudantes conhecendo a obra.">
+                    <span class="nav-number">01</span>
+                    <span class="nav-text">Estudantes & Escolas</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </li>
+
+                <li class="nav-item"
+                    data-img="../../img/nos-visitaram/Autoridades do Governo/visita-gov.png"
+                    data-title="Acompanhamento Oficial"
+                    data-desc="Autoridades acompanhando o projeto.">
+                    <span class="nav-number">02</span>
+                    <span class="nav-text">Autoridades & Governo</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </li>
+
+                <li class="nav-item"
+                    data-img="../../img/nos-visitaram/Visitas Técnicas/lins-arquitetura.jpg"
+                    data-title="Engenharia de Ponta"
+                    data-desc="Visitas técnicas especializadas.">
+                    <span class="nav-number">03</span>
+                    <span class="nav-text">Empresas & Técnicos</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+    <section class="testimonials-section">
+        <div class="section-container">
+            <h2 class="section-title-center">O que eles disseram</h2>
+
+            <div class="slider-container">
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-track-container">
+                    <ul class="slider-track" id="testimonialTrack">
+                        <li class="slide current-slide">
+                            <div class="quote-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="quote-text">“Nunca tinha visto engenharia desse tamanho. Saio daqui com
+                                    vontade de estudar no ITA.”</p>
+                                <div class="quote-author"><strong>Estudante</strong> <span>Ensino Médio</span></div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quote-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="quote-text">“É impressionante ver como uma obra dessa escala é organizada. É
+                                    aula prática pura.”</p>
+                                <div class="quote-author"><strong>Aluna</strong> <span>Engenharia Civil</span></div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quote-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="quote-text">“O futuro está sendo construído bem diante dos nossos olhos.”</p>
+                                <div class="quote-author"><strong>Pesquisador</strong> <span>Visitante</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer fundo-dinamico">
+        <div class="header-phrase">
+            <p>“Acervo oficial da Memória Institucional do ITA Fortaleza.”</p>
+        </div>
+        <div class="footer-content">
+            <div class="logos-grid">
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/Sabre_alado.png" alt="FAB" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/ITA_logo.png" alt="ITA" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/bafz.png" alt="BAFZ" class="footer-logo">
+                </div>
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/FNDE.png" alt="FNDE" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/Logo_do_Ministério_da_Educação_MEC.png" alt="MEC"
+                        class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/LOGO_MINISTERIO_DA_DEFESA_(BRASIL).png" alt="Min. Defesa"
+                        class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/logotipo-footer-ceara-2021.png" alt="Gov. Ceará"
+                        class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/2025.ago_br_govfederal_manual-de-uso_v1.2-4.jpg"
+                        alt="Gov. Federal" class="footer-logo">
+                </div>
+            </div>
+            <div class="footer-info-section">
+                <div class="contact-column">
+                    <h4 class="footer-heading">CONTATOS INSTITUCIONAIS</h4>
+                    <p><strong>Base Aérea de Fortaleza (BAFZ)</strong><br>Av. Borges de Melo, 205 - Aeroporto, Fortaleza
+                        - CE</p>
+                    <p class="contact-links"><a href="mailto:contato@ita.br">contato@ita.br</a> | <a
+                            href="tel:+558532163000">(85) 3216-3000</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

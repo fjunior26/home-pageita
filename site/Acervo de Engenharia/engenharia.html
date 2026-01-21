@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Engenharia | Memória ITA Fortaleza</title>
+    
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-engenharia.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo/ITA_logo.png" alt="Logo ITA-Fortaleza" id="logo-itafz">
+        <nav>
+            <ul class="menu-lista">
+                <li><a href="../../home-page.html">Início</a></li>
+                <li><a href="#timeline-section">Linha do Tempo</a></li>
+                <li><a>Vozes do ITA-Fortaleza</a></li>
+                <li><a href="https://lookerstudio.google.com/reporting/00abd5c3-fbc3-4f8b-b3a1-439d1693b2a0/page/p_nua2xipdwd" target="_blank" rel="noopener noreferrer">Painel de Acompanhamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="visitas-hero">
+        <div class="visitas-overlay"></div>
+        <div class="visitas-content anim-up">
+            <h1>Acervo de Engenharia</h1>
+            <p>Explore as plantas, dificuldades e fotos da obra</p>
+        </div>
+    </section>
+
+
+    <section class="tech-stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3 data-target="45000">0</h3>
+                    <p>M² de Área Construída</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3 data-target="12000">0</h3>
+                    <p>M³ de Concreto</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3 data-target="850">0</h3>
+                    <p>Engenheiros e Operários</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3 data-target="12">0</h3>
+                    <p>Blocos Acadêmicos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blueprints-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plantas e Projetos</h2>
+                <p>O acervo técnico oficial da construção.</p>
+            </div>
+
+            <div class="blueprint-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="arquitetura">Arquitetura</button>
+                <button class="filter-btn" data-filter="estrutural">Estrutural</button>
+                <button class="filter-btn" data-filter="render">Renderizações</button>
+            </div>
+
+            <div class="blueprint-grid">
+                
+                <div class="bp-item" data-category="arquitetura">
+                    <div class="bp-thumb">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800" alt="Planta Baixa Geral">
+                        <div class="bp-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="bp-info">
+                        <h4>Masterplan Geral</h4>
+                        <span>Arquitetura • Rev. 04</span>
+                    </div>
+                </div>
+
+                <div class="bp-item" data-category="estrutural">
+                    <div class="bp-thumb">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" alt="Estrutura Metálica">
+                        <div class="bp-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="bp-info">
+                        <h4>Estrutura do Auditório</h4>
+                        <span>Estrutural • Detalhe A</span>
+                    </div>
+                </div>
+
+                <div class="bp-item" data-category="render">
+                    <div class="bp-thumb">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Fachada Render">
+                        <div class="bp-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="bp-info">
+                        <h4>Fachada Principal</h4>
+                        <span>Visualização 3D</span>
+                    </div>
+                </div>
+
+                 <div class="bp-item" data-category="estrutural">
+                    <div class="bp-thumb">
+                        <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ce2ac6?w=800" alt="Fundação">
+                        <div class="bp-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="bp-info">
+                        <h4>Projeto de Fundação</h4>
+                        <span>Estrutural • Estacas</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges-section">
+        <div class="container-narrow">
+            <h2>Desafios Superados</h2>
+            <div class="accordion">
+                
+                <div class="acc-item">
+                    <div class="acc-header">
+                        <h3><i class="fas fa-water"></i> Exemplo 01</h3>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <div class="acc-body">
+                        <p>O terreno apresentou desafios significativado do lençol freático. Foi implementado
+                </div>
+
+                <div class="acc-item">
+                    <div class="acc-header">
+                        <h3><i class="fas fa-wind"></i> Conforto Térmico e Ventilação</h3>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <div class="acc-body">
+                        <p>A arquitetura foi pensada para aproveitar os ventos alísios do Ceará. O uso de brises e o posicionamento dos blocos garantem eficiência energética e redução do uso de ar-condicionado.</p>
+                    </div>
+                </div>
+
+                <div class="acc-item">
+                    <div class="acc-header">
+                        <h3><i class="fas fa-project-diagram"></i> Logística de Grande Porte</h3>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <div class="acc-body">
+                        <p>A coordenação de múltiplas frentes de trabalho simultâneas exigiu o uso de metodologia BIM (Building Information Modeling) para evitar conflitos entre instalações elétricas, hidráulicas e estruturais.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer fundo-dinamico">
+        <div class="header-phrase">
+            <p>“Acervo oficial da Memória Institucional do ITA Fortaleza.”</p>
+        </div>
+        <div class="footer-content">
+            <div class="logos-grid">
+            <div class="logo-group">
+                <img src="../../img/Logos - RADAPÉ/ITA_logo.png" alt="ITA" class="footer-logo">
+                <img src="../../img/Logos - RADAPÉ/Sabre_alado.png" alt="FAB" class="footer-logo">
+                <img src="../../img/Logos - RADAPÉ/logotipo-footer-ceara-2021.png" alt="Gov. Ceará" class="footer-logo">
+                <img src="../../img/Logos - RADAPÉ/2025_BR_GovFederal_MarcaOficial_MINISTERIO_DEFESA_POSITIVA_HORIZONTAL_RGB.png" alt="Min. Defesa" class="footer-logo">
+            </div>
+
+            <div class="logo-group">
+                <img src="../../img/Logos - RADAPÉ/Logo_do_Ministério_da_Educação_MEC.png" alt="MEC" class="footer-logo">
+                <img src="../../img/Logos - RADAPÉ/2025.ago_br_govfederal_manual-de-uso_v1.2-4.jpg" alt="Gov. Federal" class="footer-logo">
+            </div>
+        </div>
+            </div>
+            <div class="footer-info-section">
+                <div class="contact-column">
+                    <h4 class="footer-heading">CONTATOS INSTITUCIONAIS</h4>
+                    <p><strong>Base Aérea de Fortaleza (BAFZ)</strong><br>Av. Borges de Melo, 205 - Aeroporto, Fortaleza - CE</p>
+                    <p class="contact-links"><a href="mailto:contato@ita.br">contato@ita.br</a> | <a href="tel:+558532163000">(85) 3216-3000</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imgModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script-engenharia.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Documentos ITA</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; background: #f4f4f4; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #0434a4; margin-top: 0; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { margin-top: 20px; padding: 12px; width: 100%; background: #0434a4; color: white; border: none; font-weight: bold; font-size: 1rem; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #022066; }
+        textarea { width: 100%; height: 100px; margin-top: 20px; padding: 10px; font-family: monospace; border: 1px solid #0434a4; background: #eef2ff; }
+        .note { font-size: 0.85rem; color: #666; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Adicionar Novo Documento</h2>
+    
+    <label>Título do Documento:</label>
+    <input type="text" id="titulo" placeholder="Ex: Portaria nº 55/2025">
+    
+    <label>Categoria:</label>
+    <select id="categoria">
+        <option value="portaria">Portaria</option>
+        <option value="ata">Ata</option>
+        <option value="estudo">Estudo</option>
+        <option value="projeto">Projeto</option>
+        <option value="relatorio">Relatório</option>
+        <option value="convenio">Convênio</option>
+        <option value="parecer">Parecer</option>
+    </select>
+    
+    <label>Data:</label>
+    <input type="text" id="data" placeholder="DD/MM/AAAA">
+    
+    <label>Nome do Arquivo PDF:</label>
+    <input type="text" id="arquivo" placeholder="Ex: portaria_55.pdf">
+    <p class="note">Certifique-se de ter colocado este arquivo na pasta <strong>documentos</strong>.</p>
+    
+    <button onclick="gerarCodigo()">Gerar Código</button>
+    
+    <textarea id="resultado" placeholder="O código aparecerá aqui..."></textarea>
+</div>
+
+<script>
+    function gerarCodigo() {
+        const titulo = document.getElementById('titulo').value;
+        const categoria = document.getElementById('categoria').value;
+        const data = document.getElementById('data').value;
+        let arquivo = document.getElementById('arquivo').value;
+        
+        // Garante que termina com .pdf (opcional)
+        if(!arquivo.toLowerCase().endsWith('.pdf') && !arquivo.toLowerCase().endsWith('.jpg')) {
+            // arquivo += '.pdf'; // Descomente se quiser forçar
+        }
+
+        const codigo = `{ title: "${titulo}", category: "${categoria}", date: "${data}", arquivo: "${arquivo}" },`;
+        
+        document.getElementById('resultado').value = codigo;
+        document.getElementById('resultado').select();
+        document.execCommand("copy");
+        alert("Código copiado! Agora cole no seu arquivo scripts.js");
+    }
+</script>
+
+</body>
+</html>

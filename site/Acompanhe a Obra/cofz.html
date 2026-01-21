@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Institucional ITA</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo/ITA_logo.png" alt="Logo ITA-Fortaleza" id="logo-itafz">
+        <nav>
+            <ul class="menu-lista">
+                <li><a href="../../home-page.html">Início</a></li>
+                <li><a href="#timeline-section">Linha do Tempo</a></li>
+                <li><a>Vozes do ITA-Fortaleza</a></li>
+                <li><a href="https://lookerstudio.google.com/reporting/00abd5c3-fbc3-4f8b-b3a1-439d1693b2a0/page/p_nua2xipdwd" target="_blank" rel="noopener noreferrer">Painel de Acompanhamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-video">
+      <video autoplay muted loop playsinline class="video-bg">
+        <source src="../../img/VIDEO/Piloto ITA-CE-FEMININA.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+        <div class="overlay"></div>
+        <div class="conteudo">
+            <h1>Acompanhe a Obra</h1>
+            <p>Fique por dentro de cada etapa da construção que formará as mentes brilhantes do amanhã.</p>
+            <div class="botoes-container">
+                <a href="#ultimaatt" class="btn-ita btn-amarelo">Última Atualização</a>
+                <a href="#historicoevolu" class="btn-ita btn-transparente">Histórico de Evolução</a>
+                <a href="#acomoanheaevolu" class="btn-ita btn-transparente">Mais Detalhes</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ultimaatt" class="section-wrapper-light">
+        <div class="video-destaque-container">
+            <div class="tag-destaque">ÚLTIMA ATUALIZAÇÃO</div>
+            <div class="video-wrapper-grande">
+                <iframe src="https://youtu.be/YLlwDQQK9KM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info-destaque">
+                <h2>Avanço Estrutural: Dezembro/2025</h2>
+                <p>Neste vídeo mostramos a concretagem da laje principal e o início da montagem da estrutura metálica do auditório.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-videos-full" id="historicoevolu">
+        
+        <div class="galeria-container-interno">
+            <h3 class="subtitulo-galeria">Histórico de Evolução</h3>
+            
+            <div class="historico-carousel-wrapper">
+                
+                <button class="nav-btn-history prev-history" id="btnPrevHistory">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="historico-scroll-container" id="historicoContainer">
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_2" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <span class="data-video">Fevereiro 2025</span>
+                            <h4>Fundação Concluída</h4>
+                            <p>Finalização das estacas e blocos de fundação.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_3" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <span class="data-video">Janeiro 2025</span>
+                            <h4>Terraplanagem</h4>
+                            <p>Preparação do terreno e movimentação de terra.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_4" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <span class="data-video">Dezembro 2024</span>
+                            <h4>Pedra Fundamental</h4>
+                            <p>Cerimônia oficial de início das obras.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_5" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <span class="data-video">Novembro 2024</span>
+                            <h4>Visita Técnica</h4>
+                            <p>Primeira inspeção do terreno.</p>
+                        </div>
+                    </div>
+
+                      <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_5" loading="lazy" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <span class="data-video">Outubro 2024</span>
+                            <h4>Assinatura Contrato</h4>
+                            <p>Formalização do início do projeto.</p>
+                        </div>
+                    </div>
+
+                </div> <button class="nav-btn-history next-history" id="btnNextHistory">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="timeline-section" class="cronologia-full-bg">
+        <section class="cronologia-centered">
+            
+            <div class="crono-header" id="acomoanheaevolu">
+                <h2 class="crono-title">Acompanhe a Evolução da Obra</h2>
+                
+                <div class="instruction-pill">
+                    <span class="click-icon-wrapper">
+                        <i class="fas fa-hand-pointer bounce-hand"></i>
+                    </span>
+                    <span class="text-instrucao">Clique nos meses para ver detalhes e fotos</span>
+                </div>
+            </div>
+
+            <div class="year-navigation-clean">
+                <button class="year-circle-btn" id="btnPrevYear">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <span class="year-number active-year" id="displayYear">2025</span>
+                
+                <button class="year-circle-btn" id="btnNextYear">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="timeline-track-wrapper">
+                <div class="timeline-line-gray">
+                    <div class="timeline-fill-blue" id="progressFill"></div>
+                    <div class="nodes-container" id="nodesContainer"></div>
+                </div>
+            </div>
+
+            <div class="detail-card-area">
+                <div class="crono-card" id="infoCard">
+                    <div class="card-arrow-tip"></div>
+                    
+                    <div class="crono-gallery" id="galleryContainer"></div>
+
+                    <div class="crono-info">
+                        <span class="month-badge" id="cardMonth">JANEIRO</span>
+                        <h3 class="stage-title" id="cardTitle">Carregando...</h3>
+                        <p class="stage-desc" id="cardDesc">Selecione o mês acima.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="imageModal" class="crono-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer class="site-footer fundo-dinamico">
+        <div class="header-phrase">
+            <p>“Acervo oficial da Memória Institucional do ITA Fortaleza.”</p>
+        </div>
+        <div class="footer-content">
+            <div class="logos-grid">
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/Sabre_alado.png" alt="FAB" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/ITA_logo.png" alt="ITA" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/bafz.png" alt="BAFZ" class="footer-logo">
+                </div>
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/FNDE.png" alt="FNDE" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/Logo_do_Ministério_da_Educação_MEC.png" alt="MEC" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/LOGO_MINISTERIO_DA_DEFESA_(BRASIL).png" alt="Min. Defesa" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/logotipo-footer-ceara-2021.png" alt="Gov. Ceará" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/2025.ago_br_govfederal_manual-de-uso_v1.2-4.jpg" alt="Gov. Federal" class="footer-logo">
+                </div>
+            </div>
+            <div class="footer-info-section">
+                <div class="contact-column">
+                    <h4 class="footer-heading">CONTATOS INSTITUCIONAIS</h4>
+                    <p><strong>Base Aérea de Fortaleza (BAFZ)</strong><br>Av. Borges de Melo, 205 - Aeroporto, Fortaleza - CE</p>
+                    <p class="contact-links"><a href="mailto:contato@ita.br">contato@ita.br</a> | <a href="tel:+558532163000">(85) 3216-3000</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

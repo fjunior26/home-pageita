@@ -1,0 +1,305 @@
+/* =========================================
+   ESTILOS: PARA O FUTURO
+========================================= */
+
+/* Fonte Moderna para o Futuro */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+/* ================= HEADER ================= */
+header {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;        
+    padding: 15px 40px;         
+    background-color: #0434a4; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+    z-index: 1000;
+    position: fixed; 
+    top: 0; left: 0; width: 100%;      
+}
+
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em âncoras */
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo-itafz { max-height: 60px; width: auto; }
+
+.menu-lista {
+    display: flex; list-style: none; gap: 30px; margin: 0; padding: 0;
+}
+.menu-lista a {
+    color: #ffffff; text-decoration: none; font-weight: bold;        
+    font-size: 1rem; transition: all 0.3s ease; opacity: 0.9; cursor: pointer;
+}
+.menu-lista a:hover {
+    color: #FFD700; opacity: 1; transform: translateY(-2px); 
+}
+
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container-narrow { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- 1. HERO VISIONÁRIO --- */
+.future-hero {
+    position: relative; height: 70vh;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600'); /* Imagem Tech/Abstrata */
+    background-size: cover; background-position: center; background-attachment: fixed;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; color: #fff; margin-top: 0;
+}
+
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    /* Gradiente Azul Tecnológico */
+    background: linear-gradient(135deg, rgba(4, 52, 164, 0.9), rgba(0, 20, 60, 0.8));
+    z-index: 1;
+}
+
+.hero-content { position: relative; z-index: 2; padding: 20px; }
+
+.badge-future {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 20px; border-radius: 50px; text-transform: uppercase; font-size: 0.9rem;
+    display: inline-block; margin-bottom: 25px; backdrop-filter: blur(5px);
+}
+
+.hero-content h1 {
+ font-size: 4rem; font-weight: 800; margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #aabfe3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.hero-content p { font-size: 1.4rem; max-width: 700px; margin: 0 auto; font-weight: 300; opacity: 0.9; }
+
+.scroll-arrow {
+    position: absolute; bottom: 40px; z-index: 2; color: #fff; font-size: 1.5rem;
+    animation: float 2s infinite ease-in-out;
+}
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+
+
+/* --- 2. PILARES (CARDS) --- */
+.pillars-section { padding: 100px 0; background: #f8fbfd; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-size: 2.5rem; color: #0434a4; font-weight: 800; }
+.section-header p { font-size: 1.1rem; color: #666; }
+
+.pillars-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;
+}
+
+.pillar-card {
+    background: #fff; padding: 40px 30px; border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(4, 52, 164, 0.08); transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden; border-bottom: 4px solid transparent;
+}
+
+.pillar-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(4, 52, 164, 0.15); border-bottom-color: #FFD700; }
+
+.icon-box {
+    width: 70px; height: 70px; background: linear-gradient(135deg, #0434a4, #00509d);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 1.8rem; margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(4, 52, 164, 0.2);
+}
+
+.pillar-card h3 { font-size: 1.4rem; color: #333; margin-bottom: 15px; font-weight: 700; }
+.pillar-card p { color: #666; line-height: 1.6; font-size: 1rem; }
+
+
+/* --- 3. VISÃO 10 ANOS --- */
+.vision-section { padding: 100px 0; background: #fff; overflow: hidden; }
+
+.container-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+}
+
+.vision-img img {
+    width: 100%; border-radius: 20px; box-shadow: 30px 30px 0 #f0f4f8; transition: 0.5s;
+}
+.vision-img:hover img { transform: scale(1.02); box-shadow: 30px 30px 0 #FFD700; }
+
+.vision-text h2 { font-size: 1rem; color: #FFD700; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; margin-bottom: 10px; }
+.vision-text h3 { font-size: 2.8rem; color: #0434a4; font-weight: 800; margin-bottom: 30px; line-height: 1.2; }
+.vision-text p { font-size: 1.1rem; color: #555; line-height: 1.8; margin-bottom: 20px; }
+
+.vision-list { list-style: none; padding: 0; margin-top: 30px; }
+.vision-list li { margin-bottom: 15px; font-size: 1.1rem; color: #333; font-weight: 500; display: flex; align-items: center; gap: 15px; }
+.vision-list li i { color: #0434a4; background: #eef4fb; padding: 8px; border-radius: 50%; font-size: 0.8rem; }
+
+
+/* --- 4. MENSAGEM FINAL --- */
+.final-message-section {
+    padding: 120px 20px; text-align: center;
+    background: #0434a4; color: #fff;
+    background-image: radial-gradient(circle at center, #0645d6 0%, #0434a4 70%);
+}
+
+.icon-infinite { font-size: 3rem; color: #FFD700; margin-bottom: 30px; opacity: 0.8; }
+
+.message-content h2 {
+     font-size: 3rem; font-weight: 800; margin-bottom: 20px;
+}
+.message-content p { font-size: 1.3rem; max-width: 600px; margin: 0 auto; opacity: 0.9; font-weight: 300; }
+
+
+/* --- ANIMAÇÕES --- */
+.anim-up { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.anim-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s ease-out; }
+.anim-right { opacity: 0; transform: translateX(40px); transition: all 0.8s ease-out; }
+
+.visible { opacity: 1; transform: translate(0, 0); }
+
+.delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } 
+.delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .container-split { grid-template-columns: 1fr; gap: 40px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .vision-text h3 { font-size: 2rem; }
+    .message-content h2 { font-size: 2rem; }
+}
+
+/* ================= RODAPÉ CORRIGIDO (Versão Estável) ================= */
+.fundo-dinamico {
+    /* Gradiente sólido e elegante (corrigido bug de visualização) */
+    background: linear-gradient(-45deg, #001b3d, #003366, #00509d, #002855);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    width: 100%;
+    /* Remove padding excessivo que poderia quebrar layout */
+    padding-bottom: 40px;
+    /* Garante que o footer tenha altura para o conteúdo */
+    min-height: 300px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px; /* Garante margem lateral em telas pequenas */
+}
+
+.header-phrase {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.header-phrase p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #FFD700;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: 30px;
+}
+
+.logos-grid {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    /* Correção de largura e alinhamento */
+    width: fit-content;
+    max-width: 100%; 
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    flex-wrap: wrap; /* Importante para não quebrar no mobile */
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: grayscale(0%);
+}
+
+.logos-grid:hover .footer-logo {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transform: scale(0.95);
+}
+
+.logos-grid .footer-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+.footer-info-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    border: none;
+    font-weight: 600;
+}
+
+.contact-column p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.contact-links a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .logos-grid { gap: 20px; padding: 20px; }
+    .logo-group { gap: 20px; }
+    .footer-logo { height: 35px; }
+}

@@ -1,0 +1,344 @@
+/* =========================================
+   RESET GERAL E CONFIGURAÇÕES DO CORPO
+   Remove margens padrões dos navegadores
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Padding-top compensa o menu fixo para o conteúdo não ficar escondido */
+    padding-top: 70px; 
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em âncoras */
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* =========================================
+   HEADER E NAVEGAÇÃO
+   Menu superior fixo
+========================================= */
+header {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;        
+    padding: 15px 40px;         
+    background-color: #0434a4; /* Azul Oficial ITA */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+    z-index: 100;
+    
+    /* Configuração para fixar no topo */
+    position: fixed; 
+    top: 0;           
+    left: 0;          
+    width: 100%;      
+    box-sizing: border-box; 
+}
+
+#logo-itafz {
+    max-height: 60px;           
+    width: auto;                
+}
+
+.menu-lista {
+    display: flex;              
+    list-style: none; 
+    gap: 30px;        
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo dos Links do Menu */
+.menu-lista a {
+    color: #ffffff;           
+    text-decoration: none;    
+    font-weight: bold;        
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease; 
+    opacity: 0.9;             
+    cursor: pointer;
+}
+
+.menu-lista a:visited {
+    color: #ffffff;
+}
+
+/* Efeito Hover (Mouse em cima) */
+.menu-lista a:hover {
+    color: #FFD700;           /* Amarelo Ouro */
+    opacity: 1;               
+    transform: translateY(-2px); 
+}
+
+
+
+/* =========================================
+   ESTILOS: ACERVO DE ENGENHARIA
+========================================= */
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container-narrow { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+/* --- 1. HERO SIMPLIFICADO --- */
+.visitas-hero {
+    position: relative; height: 50vh; min-height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600'); /* Troque pela sua foto */
+    background-size: cover; background-position: center; background-attachment: fixed;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: #fff; text-align: center; margin-top: 0;
+}
+.visitas-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(4, 52, 164, 0.8), rgba(0,0,0,0.3)); z-index: 1;
+}
+.visitas-content { position: relative; z-index: 2; padding: 20px; }
+.visitas-content h1 {
+    font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.visitas-content p { font-size: 1.3rem; font-weight: 300; opacity: 0.9; }
+
+/* --- 2. ESTATÍSTICAS (STATS) --- */
+.tech-stats-section {
+    background: #f4f4f4; padding: 60px 0; margin-top: -50px; position: relative; z-index: 3;
+}
+
+.stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
+}
+
+.stat-card {
+    background: #fff; padding: 30px; border-radius: 8px; text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-bottom: 4px solid #0434a4;
+    transition: transform 0.3s;
+}
+.stat-card:hover { transform: translateY(-5px); border-bottom-color: #FFD700; }
+
+.stat-card i { font-size: 2rem; color: #ccc; margin-bottom: 15px; }
+.stat-card h3 { font-size: 2.5rem; color: #0434a4; font-weight: 900; margin-bottom: 5px; }
+.stat-card p { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+
+/* --- 3. GALERIA (PLANTAS) --- */
+.blueprints-section { padding: 80px 0; background: #fff; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-size: 2.5rem; color: #0434a4; text-transform: uppercase; }
+
+/* Filtros */
+.blueprint-filters { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+.filter-btn {
+    background: transparent; border: 2px solid #ddd; padding: 8px 20px; border-radius: 50px;
+    cursor: pointer; font-weight: bold; color: #666; transition: 0.3s;
+}
+.filter-btn:hover, .filter-btn.active {
+    background: #0434a4; color: #fff; border-color: #0434a4;
+}
+
+/* Grid */
+.blueprint-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;
+}
+
+.bp-item {
+    border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s;
+}
+.bp-item:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+.bp-thumb { position: relative; height: 220px; overflow: hidden; cursor: pointer; }
+.bp-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.bp-item:hover .bp-thumb img { transform: scale(1.1); }
+
+.bp-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(4, 52, 164, 0.6); display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.3s;
+}
+.bp-item:hover .bp-overlay { opacity: 1; }
+.bp-overlay i { color: #fff; font-size: 2rem; }
+
+.bp-info { padding: 20px; background: #fafafa; border-top: 1px solid #eee; }
+.bp-info h4 { font-size: 1.1rem; color: #333; margin-bottom: 5px; }
+.bp-info span { font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; color: #0434a4; }
+
+
+/* --- 4. ACCORDION (DESAFIOS) --- */
+.challenges-section { padding: 80px 0; background: #f9f9f9; }
+.challenges-section h2 { text-align: center; color: #0434a4; margin-bottom: 40px; font-size: 2.2rem; }
+
+.accordion { display: flex; flex-direction: column; gap: 15px; }
+.acc-item { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow: hidden; }
+
+.acc-header {
+    padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    transition: background 0.3s;
+}
+.acc-header:hover { background: #f0f4ff; }
+.acc-header h3 { font-size: 1.1rem; color: #333; display: flex; align-items: center; gap: 10px; }
+.acc-header h3 i { color: #FFD700; }
+.acc-header .arrow { transition: transform 0.3s; color: #ccc; }
+
+.acc-item.active .acc-header .arrow { transform: rotate(180deg); color: #0434a4; }
+.acc-body {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 20px;
+}
+.acc-item.active .acc-body { padding: 0 20px 20px 20px; }
+.acc-body p { color: #666; line-height: 1.6; }
+
+
+/* --- MODAL (LIGHTBOX) --- */
+.modal {
+    display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9); padding-top: 60px;
+}
+.modal-content {
+    margin: auto; display: block; width: 80%; max-width: 900px; max-height: 80vh; object-fit: contain;
+    animation: zoomIn 0.3s;
+}
+.close-modal {
+    position: absolute; top: 30px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;
+}
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+/* Fundo animado com gradiente azul */
+.fundo-dinamico {
+    background: linear-gradient(-45deg, #001b3d, #003366, #00509d, #002855);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    width: 100%;
+    min-height: 300px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Estilo da caixa branca de logos */
+.logos-grid {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    width: fit-content;
+    max-width: 95%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+
+.footer-logo {
+    height: 50px;       
+    width: auto;        
+    max-width: 140px;   
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: grayscale(0%);
+}
+
+/* Efeito Spotlight (Holofote) nas logos */
+.logos-grid:hover .footer-logo {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transform: scale(0.95);
+}
+
+.logos-grid .footer-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+/* Ajustes Mobile para Footer */
+@media (max-width: 1024px) {
+    .logos-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .logo-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer-logo {
+        height: 35px;
+    }
+}
+
+.footer-info-section {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.contact-column p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.contact-links a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.header-phrase {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.header-phrase p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #FFD700;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: 20px;
+}

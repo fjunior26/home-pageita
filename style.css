@@ -1,0 +1,548 @@
+/* =========================================
+   RESET GERAL E CONFIGURAÇÕES DO CORPO
+   Remove margens padrões dos navegadores
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Padding-top compensa o menu fixo para o conteúdo não ficar escondido */
+    padding-top: 70px; 
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em âncoras */
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* =========================================
+   HEADER E NAVEGAÇÃO
+   Menu superior fixo
+========================================= */
+header {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;        
+    padding: 15px 40px;         
+    background-color: #0434a4; /* Azul Oficial ITA */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+    z-index: 100;
+    
+    /* Configuração para fixar no topo */
+    position: fixed; 
+    top: 0;           
+    left: 0;          
+    width: 100%;      
+    box-sizing: border-box; 
+}
+
+#logo-itafz {
+    max-height: 60px;           
+    width: auto;                
+}
+
+.menu-lista {
+    display: flex;              
+    list-style: none; 
+    gap: 30px;        
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo dos Links do Menu */
+.menu-lista a {
+    color: #ffffff;           
+    text-decoration: none;    
+    font-weight: bold;        
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease; 
+    opacity: 0.9;             
+    cursor: pointer;
+}
+
+.menu-lista a:visited {
+    color: #ffffff;
+}
+
+/* Efeito Hover (Mouse em cima) */
+.menu-lista a:hover {
+    color: #FFD700;           /* Amarelo Ouro */
+    opacity: 1;               
+    transform: translateY(-2px); 
+}
+
+/* =========================================
+   VÍDEO HERO (BACKGROUND)
+========================================= */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra tudo sem deformar */
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurece o vídeo */
+    z-index: 2;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.conteudo p {
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   BOTÕES GERAIS (ESTILO Padrão)
+========================================= */
+.botoes-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-ita {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-amarelo {
+    background-color: #FFD700;
+    color: #003366;
+    border: 2px solid #FFD700;
+}
+
+.btn-amarelo:hover {
+    background-color: #e6c200;
+    transform: translateY(-3px);
+}
+
+.btn-transparente {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-transparente:hover {
+    background-color: white;
+    color: #003366;
+}
+
+/* =========================================
+   SEÇÃO "SOBRE" & ANIMAÇÃO DE TEXTO
+========================================= */
+#sobre-memoria {
+    background-color: #fff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dadce0;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.container-texto {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#sobre-memoria p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #444;
+    font-weight: 300;
+}
+
+#sobre-memoria strong {
+    color: #003366;
+    font-weight: 700;
+}
+
+/* Animação da barra lateral amarela */
+#barra-lateral {
+    border-left: 10px solid #FFD700;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+#barra-lateral.visivel {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Animação das palavras surgindo */
+.palavra-animada {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+.palavra-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   CARROSSEL DE LINKS
+========================================= */
+
+#wrapper {
+    scroll-margin-top: 15vh; /* Ajuste para scroll */
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Trilha onde os cards ficam */
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+/* ESTILO DO CARD (Agora é um link <a>)
+*/
+.card {
+    flex: 0 0 auto;
+    width: 360px;
+    height: 550px;
+    
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    background: #000;
+    
+    /* Propriedades para Link <a> */
+    display: block; /* Garante comportamento de caixa */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* A Imagem dentro do Card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+/* Zoom suave ao passar o mouse */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* A Legenda (Overlay sobre a imagem) */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+    /* Degradê preto para leitura do texto */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+    pointer-events: none; /* Deixa o clique passar para o link */
+}
+
+.card-title {
+    color: #FFD700;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.card-desc {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Botões de Navegação (Setas) */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    font-size: 24px;
+    color: #5f6368;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* Responsivo Mobile */
+@media (max-width: 768px) {
+    .nav-btn { display: none; } /* Esconde setas no celular */
+    .card { width: 280px; min-height: 380px; }
+    .carousel-wrapper { padding: 0 20px; }
+}
+
+/* =========================================
+   SEÇÃO DESTAQUE (Imagem Grande)
+========================================= */
+.secao-destaque {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.figure-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden;
+}
+
+.secao-destaque img {
+    width: 100%;
+    height: 100%;       
+    object-fit: cover;  
+    display: block;
+}
+
+/* Legenda sobreposta na imagem destaque */
+.legenda-overlay {
+    position: absolute;
+    bottom: 0;         
+    left: 0;
+    width: 100%;       
+    z-index: 10;       
+    padding: 30px 20px;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.legenda-overlay strong {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+/* Fundo animado com gradiente azul */
+.fundo-dinamico {
+    background: linear-gradient(-45deg, #001b3d, #003366, #00509d, #002855);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    width: 100%;
+    min-height: 300px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Estilo da caixa branca de logos */
+.logos-grid {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    width: fit-content;
+    max-width: 95%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+
+.footer-logo {
+    height: 50px;       
+    width: auto;        
+    max-width: 140px;   
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: grayscale(0%);
+}
+
+/* Efeito Spotlight (Holofote) nas logos */
+.logos-grid:hover .footer-logo {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transform: scale(0.95);
+}
+
+.logos-grid .footer-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+/* Ajustes Mobile para Footer */
+@media (max-width: 1024px) {
+    .logos-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .logo-group {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer-logo {
+        height: 35px;
+    }
+}
+
+.footer-info-section {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.contact-column p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.contact-links a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.header-phrase {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.header-phrase p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #FFD700;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: 20px;
+}

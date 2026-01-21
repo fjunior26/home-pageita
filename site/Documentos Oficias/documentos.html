@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos Oficiais - ITA Fortaleza</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo/ITA_logo.png" alt="Logo ITA-Fortaleza" id="logo-itafz">
+        <nav>
+            <ul class="menu-lista">
+                <li><a href="../../home-page.html">Início</a></li> 
+                <li><a href="index.html#timeline-section">Linha do Tempo</a></li>
+                <li><a href="#" style="color: #FFD700; opacity: 1;">Documentos</a></li>
+                <li><a href="https://lookerstudio.google.com/reporting/00abd5c3-fbc3-4f8b-b3a1-439d1693b2a0/page/p_nua2xipdwd" target="_blank" rel="noopener noreferrer">Painel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="docs-hero-dynamic">
+        <div class="hero-content-wrapper fade-in-up">
+            <h1>Acervo Digital</h1>
+            <p>Consulte o repositório oficial de atos, projetos e relatórios do ITA Fortaleza.</p>
+        </div>
+
+        <div class="docs-dashboard glass-effect fade-in-up delay-1">
+            <div class="dash-card">
+                <div class="dash-icon-circle"><i class="fas fa-file-alt"></i></div>
+                <div class="dash-info">
+                    <span class="dash-number counter" id="totalDocs" data-target="0">0</span>
+                    <span class="dash-label">Documentos</span>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon-circle"><i class="fas fa-clock"></i></div>
+                <div class="dash-info">
+                    <span class="dash-number">2025</span>
+                    <span class="dash-label">Atualizado</span>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon-circle"><i class="fas fa-gavel"></i></div>
+                <div class="dash-info">
+                    <span class="dash-number counter" id="countPortarias" data-target="0">0</span>
+                    <span class="dash-label">Portarias</span>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon-circle"><i class="fas fa-ruler-combined"></i></div>
+                <div class="dash-info">
+                    <span class="dash-number counter" id="countProjetos" data-target="0">0</span>
+                    <span class="dash-label">Projetos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="docs-tools fade-in-up delay-2">
+        <div class="tools-wrapper">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="docSearch" placeholder="Pesquisar documento...">
+            </div>
+
+            <div class="sort-box">
+                <i class="fas fa-sort-amount-down"></i>
+                <select id="docSort">
+                    <option value="newest">Mais Recentes</option>
+                    <option value="oldest">Mais Antigos</option>
+                    <option value="az">A-Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-buttons" id="docFilters">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="portaria">Portarias</button>
+            <button class="filter-btn" data-category="ata">Atas</button>
+            <button class="filter-btn" data-category="estudo">Estudos</button>
+            <button class="filter-btn" data-category="projeto">Projetos</button>
+            <button class="filter-btn" data-category="relatorio">Relatórios</button>
+            <button class="filter-btn" data-category="convenio">Convênios</button>
+            <button class="filter-btn" data-category="parecer">Pareceres</button>
+        </div>
+    </section>
+
+    <section class="docs-container fade-in-up delay-3">
+        <div class="docs-grid" id="docsGrid"></div>
+        
+        <div id="noDocsMessage" class="empty-state" style="display:none;">
+            <i class="far fa-folder-open"></i>
+            <p>Nenhum documento encontrado.</p>
+        </div>
+    </section>
+
+    <div id="docModal" class="doc-modal-overlay">
+        <div class="doc-modal-content">
+            <span class="close-doc-modal">&times;</span>
+            <div class="modal-header-doc">
+                <h3 id="modalDocTitle">Título do Documento</h3>
+                <a href="#" id="modalDownloadBtn" class="btn-download-modal" download>
+                    <i class="fas fa-download"></i> Baixar Original
+                </a>
+            </div>
+            <div class="modal-body-doc" id="modalDocBody"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer fundo-dinamico">
+        <div class="header-phrase">
+            <p>“Acervo oficial da Memória Institucional do ITA Fortaleza.”</p>
+        </div>
+        <div class="footer-content">
+            <div class="logos-grid">
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/Sabre_alado.png" alt="FAB" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/ITA_logo.png" alt="ITA" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/bafz.png" alt="BAFZ" class="footer-logo">
+                </div>
+                <div class="logo-group">
+                    <img src="../../img/Logos - RADAPÉ/FNDE.png" alt="FNDE" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/Logo_do_Ministério_da_Educação_MEC.png" alt="MEC" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/LOGO_MINISTERIO_DA_DEFESA_(BRASIL).png" alt="Min. Defesa" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/logotipo-footer-ceara-2021.png" alt="Gov. Ceará" class="footer-logo">
+                    <img src="../../img/Logos - RADAPÉ/2025.ago_br_govfederal_manual-de-uso_v1.2-4.jpg" alt="Gov. Federal" class="footer-logo">
+                </div>
+            </div>
+            <div class="footer-info-section">
+                <div class="contact-column">
+                    <h4 class="footer-heading">CONTATOS INSTITUCIONAIS</h4>
+                    <p><strong>Base Aérea de Fortaleza (BAFZ)</strong><br>Av. Borges de Melo, 205 - Aeroporto, Fortaleza - CE</p>
+                    <p class="contact-links"><a href="mailto:contato@ita.br">contato@ita.br</a> | <a href="tel:+558532163000">(85) 3216-3000</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
